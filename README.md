@@ -3,6 +3,8 @@ Arduino sketch for multiple NeoPixels to create spooky 'fire' effect
 
 I have tested this with an [Adafruit Metro Mini 5v](https://www.adafruit.com/product/2590) and an [Adafruit Pro Trinket 3v](https://www.adafruit.com/products/2010) successfully.  You'll also need to get your hands on some [NeoPixels](https://www.adafruit.com/search?q=neopixel&b=1) and the [NeoPixel library](https://github.com/adafruit/Adafruit_NeoPixel).
 
+I recommending powering this with a USB [battery charger](http://www.amazon.com/Anker-Generation-Astro-mini-Lipstick-Sized/dp/B005X1Y7I2).
+
 Remember to indicate what pin you're using and how many NeoPixel LED's are in your chain:
 ```Arduino
 #define PIN 6
