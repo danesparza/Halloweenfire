@@ -19,18 +19,18 @@ Remember to indicate what pin you're using and how many NeoPixel LED's are in yo
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(4, PIN, NEO_GRB + NEO_KHZ800);
 ```
 
-You can also adjust some parameters of the sketch to easily tweak the fire effect.  Here, we are using a green flame effect:
+You can also adjust some parameters of the sketch to easily tweak the fire effect.  Here, we are using an orange flame effect by default:
 ```Arduino
-  //  Uncomment one of these RGB (Red, Green, Blue) values to
-  //  set the base color of the flame.  The color will flickr
-  //  based on the initial base color
-  
-  //  Regular (orange) flame:
-  //  int r = 226, g = 121, b = 35;
+RGB flameColors[] = {
+  { 226, 121, 35},  // Orange flame
+  { 158, 8, 148},   // Purple flame 
+  { 74, 150, 12},   // Green flame
+  { 226, 15, 30}    // Red flame
+  };
+```
 
-  //  Purple flame:
-  //  int r = 158, g = 8, b = 148;
-
-  //  Green flame:
-  int r = 74, g = 150, b = 12;
+I also recently tweaked this sketch to make use of a momentary push button.  Pushing the button will cycle to the next item in the color array (effectively changing the color):
+```Arduino
+//  The button pin
+const int buttonPin = 2;
 ```
