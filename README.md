@@ -6,7 +6,7 @@ I have tested this with an [Adafruit Metro Mini 5v](https://www.adafruit.com/pro
 I recommending powering this with a USB [battery charger](http://www.amazon.com/Anker-Generation-Astro-mini-Lipstick-Sized/dp/B005X1Y7I2).
 
 Remember to indicate what pin you're using and how many NeoPixel LED's are in your chain:
-```Arduino
+```cpp
 #define PIN 6
 
 // Parameter 1 = number of pixels in strip
@@ -20,7 +20,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(4, PIN, NEO_GRB + NEO_KHZ800);
 ```
 
 You can also adjust some parameters of the sketch to easily tweak the fire effect.  Here, we are using an orange flame effect by default:
-```Arduino
+```cpp
 RGB flameColors[] = {
   { 226, 121, 35},  // Orange flame
   { 158, 8, 148},   // Purple flame 
@@ -30,7 +30,7 @@ RGB flameColors[] = {
 ```
 
 I also recently tweaked this sketch to make use of a momentary push button.  Pushing the button will cycle to the next item in the color array (effectively changing the color):
-```Arduino
+```cpp
 //  The button pin
 const int buttonPin = 2;
 ```
